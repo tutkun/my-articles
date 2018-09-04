@@ -20,19 +20,10 @@ Bir de yapılması muhtemel(zaman dahilinde) olanlar var. Onları da yetişirse 
 * [ ] Hatırlatma sistemi (yapılacaklar)
 * [ ] 
 * [ ] 
-* [ ] 
-* [ ] 
-* [ ] 
-* [ ] 
-* [ ] 
 
 
 ### Yapılması Muhtemel olanlar
 
 * [ ] Arkadaşlık sistemi
-* [ ] 
-* [ ] 
-* [ ] 
-* [ ] 
 * [ ] 
 * [ ] 
