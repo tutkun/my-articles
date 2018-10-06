@@ -2,7 +2,9 @@
 
 Burada Linux tabanlı shell scriptlerinin nasıl çalıştığını göreceğiz. Hangi komutların nasıl kullanıldığını ve hangi ek özelliklerle nasıl faydalanıldığını göreceğiz.
 
-[Şurada](https://www.geeksforgeeks.org/array-basics-shell-scripting-set-1) da güzel bir kaynak mevcut:
+[Şurada](https://www.geeksforgeeks.org/array-basics-shell-scripting-set-1) da güzel bir kaynak mevcut.
+
+Bu anlatımların benzerleri [şuradaki youtube](https://www.youtube.com/playlist?list=PLSg_-k7KzeO-9oYlhrPeuzQJ5NuP5FAvv) sayfasında da mevcut.
 
 ## Konular
 - `echo` Komutu
@@ -13,8 +15,6 @@ Burada Linux tabanlı shell scriptlerinin nasıl çalıştığını göreceğiz.
 - `case` Komutu
 - `while` Komutu
 - `for` Komutu
-- `` Komutu
-- `` Komutu
 - `sort` Komutu
 - `uniq` Komutu
 - Fonksiyon tanımlama
