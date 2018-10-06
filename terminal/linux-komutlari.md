@@ -150,11 +150,12 @@ done
 Aşağıda kullanılmak üzere bir fonksiyon tanımlayalım:
 ```sh
 cikartma_islemi () {
+    # fonksiyona girilen parametreler $1 'den başlar. Kaç tane girildiyse o kadara gider...
     parametreler=$(( $1 + $2 ))
     echo "Merhaba, parametreler: $parametreler"
 }
 
-# fonksiyonu 2 parametre ile çıkartıyoruz:
+# fonksiyona 2 parametre gönderip çıkartma işlemini yapıyoruz:
 cikartma_islemi 120 20
 
 ```
