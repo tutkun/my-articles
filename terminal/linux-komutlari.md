@@ -132,6 +132,7 @@ do
 done < $dosya
 
 ```
+tabii ki daha spesifik işlemler de yapılabilir. Mesela `done < $dosya` yerinde `$(ls -l | awk '{print $0}')` şeklinde bir dizin içindeki dosya/dizinler listelenip ilk sütuna denk gelenler alınabilir.
 
 ### FOR Komutu
 for döngüsünün çalışma şekli
