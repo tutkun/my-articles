@@ -2,7 +2,7 @@
 
 Burada Linux tabanlı shell scriptlerinin nasıl çalıştığını göreceğiz. Hangi komutların nasıl kullanıldığını ve hangi ek özelliklerle nasıl faydalanıldığını göreceğiz.
 
-(Şurada)[https://www.geeksforgeeks.org/array-basics-shell-scripting-set-1] da güzel bir kaynak mevcut:
+[Şurada](https://www.geeksforgeeks.org/array-basics-shell-scripting-set-1) da güzel bir kaynak mevcut:
 
 ## Konular
 - `echo` Komutu
