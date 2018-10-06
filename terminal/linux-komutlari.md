@@ -15,8 +15,8 @@ Burada Linux tabanlı shell scriptlerinin nasıl çalıştığını göreceğiz.
 - `for` Komutu
 - `` Komutu
 - `` Komutu
-- `` Komutu
-- `` Komutu
+- `sort` Komutu
+- `uniq` Komutu
 - Fonksiyon tanımlama
 
 ### ECHO Komutu
@@ -145,6 +145,38 @@ done
 
 ```
 
+### Sort Kullanımı
+Bir dosya içindeki metni satırlara göre sıralı almak:
+```sh
+# önce bir dosya oluşturalım:
+touch metin.txt
+
+# şimdi dosyaya şu metni satırlar halinde girelim:
+echo """
+birinci
+ikinci
+üçüncü
+dördüncü
+beşinci
+altıncı
+altıncı
+beşinci
+""" >> metin.txt
+
+# şimdi cat ile ekrana dosya içeriğini alıp sort ile sıralı şekilde basalım:
+cat metin.txt | sort
+
+```
+
+### Unique Kullanımı
+Bir metin içindeki satırları `sort` ile alfabetik olarak sıralayıp aynı olan satırları `uniq` ile çıkartıp ekranda gösteriyoruz:
+```sh
+cat metin.txt | sort | uniq
+
+# artık dosyayı silebiliriz:
+rm -f metin.txt
+
+```
 
 ### Fonksiyon Tanımlama
 Aşağıda kullanılmak üzere bir fonksiyon tanımlayalım:
