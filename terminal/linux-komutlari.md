@@ -146,3 +146,15 @@ done
 ```
 
 
+### Fonksiyon Tanımlama
+Aşağıda kullanılmak üzere bir fonksiyon tanımlayalım:
+```sh
+cikartma_islemi () {
+    parametreler=$(( $1 + $2 ))
+    echo "Merhaba, parametreler: $parametreler"
+}
+
+# fonksiyonu 2 parametre ile çıkartıyoruz:
+cikartma_islemi 120 20
+
+```
