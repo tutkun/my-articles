@@ -35,7 +35,7 @@ php -r "if (hash_file('sha1', 'deployer.phar') === '35e8dcd50cf7186502f603676b97
 ```
 Output:
 ```quote
-Installer verified`
+Installer verified
 ```
 
 Make Deployer available system wide. Note that if you're running Windows or macOS on your local machine, you may need to create the `/usr/local/bin/dep` directory before running this command:
@@ -49,46 +49,66 @@ Make it executable:
 sudo chmod +x /usr/local/bin/dep
 ```
 
-Next, create a Laravel project on your local machine:
-
+#### Next, create a Laravel project on your local machine:
+```sh
 composer create-project --prefer-dist laravel/laravel laravel-app "5.5.*"
+```
 You have installed all the required software on your local machine. With that in place, we will move on to creating a Git repository for the application.
 
-Step 2 — Connecting to Your Remote Git Repository
+## Step 2 — Connecting to Your Remote Git Repository
 Deployer was designed to enable users to deploy code from anywhere. To allow this functionality, it requires users to push code to a repository on the Internet from which Deployer then copies the code over to the production server. We will use Git, an open-source version control system, to manage the source code of the Laravel application. You can connect to the Git server using SSH protocol, and to do this securely you need to generate SSH keys. This is more secure than password-based authentication and let's you avoid typing the password before each deployment.
 
 Run the following command on your local machine to generate the SSH key. Note that the -f specifies the filename of the key file, and you can replace gitkey with your own filename. It will generate an SSH key pair (named gitkey and gitkey.pub) to the ~/.ssh/ folder.
 
+```sh
 ssh-keygen -t rsa -b 4096 -f  ~/.ssh/gitkey
+```
+
 It is possible that you have more SSH keys on your local machine, so configure the SSH client to know which SSH private key to use when it connects to your Git server.
 
-Create an SSH config file on your local machine:
-
+#### Create an SSH config file on your local machine:
+```sh
 touch ~/.ssh/config
-Open the file and add a shortcut to your Git server. This should contain the HostName directive (pointing to your Git server's hostname) and the IdentityFile directive (pointing to the file path of the SSH key you just created:
+```
 
+Open the file and add a shortcut to your Git server. This should contain the HostName directive (pointing to your Git server's hostname) and the IdentityFile directive (pointing to the file path of the SSH key you just created:
+```sh
 ~/.ssh/config
-Host mygitserver.com
+```
+
+```sh
+    Host mygitserver.com
     HostName mygitserver.com
     IdentityFile ~/.ssh/gitkey
-Save and close the file, and then restrict its permissions:
+```
 
+Save and close the file, and then restrict its permissions:
+```sh
 chmod 600 ~/.ssh/config
+```
+
 Now your SSH client will know which private key use to connect to the Git server.
 
 Display the content of your public key file with the following command:
 
+```sh
 cat ~/.ssh/gitkey.pub
+```
+
 Copy the output and add the public key to your Git server.
 
 If you use a Git hosting service, consult its documentation on how to add SSH keys to your account:
 
-Add SSH keys to GitHub
-Add SSH keys to GitLab
-Add SSH keys to Bitbucket
+- [Add SSH keys to GitHub]()
+- [Add SSH keys to GitLab]()
+- [Add SSH keys to Bitbucket]()
+
 Now you will be able to connect to your Git server with your local machine. Test the connection with the following command:
 
+```sh
 ssh -T git@mygitserver.com
+```
+
 If this command results in an error, check that you added your SSH keys correctly by referring to your Git hosting service's documentation and try connecting again.
 
 Before pushing the application to the remote Git repository and deploying it, let's first configure the production server.
