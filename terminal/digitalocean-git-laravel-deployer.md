@@ -469,10 +469,10 @@ As a final step, this section will cover a simple deployment process you can use
 Start by modifying the application before you deploy again. For example, you can add a new route in the routes/web.php file:
 
 /routes/web.php
-```php
+```
 <?php
 
-// ...
+...
 
 Route::get('/', function () {
     return view('welcome');
