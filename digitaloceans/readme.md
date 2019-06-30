@@ -4,9 +4,11 @@
 - İlgili adımlar Envoyer ile otomatize edilecektir.
 
 ## Sayfa İçerikleri:
-    - [Digital Ocean Sunucu Yapılandırması](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/readme.md)
-    - [SSH Bağlantısı](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/ssh-connection.md)
-    - [Sunucunun Temel Ayarları](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/sunucu-temel-ayarlari.md)
+1. [Digital Ocean Sunucu Yapılandırması](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/readme.md)
+2. [SSH Bağlantısı](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/ssh-connection.md)
+3. [Sunucunun Temel Ayarları](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/sunucu-temel-ayarlari.md)
+
+
 
 ## Giriş
 Bir "LAMP" yığını, bir sunucunun dinamik web sitelerini ve web uygulamalarını barındırmasını sağlamak için tipik olarak bir araya getirilen bir açık kaynaklı yazılım grubudur. 
