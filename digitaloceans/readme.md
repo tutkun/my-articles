@@ -503,6 +503,8 @@ Bilgiye daha sonra tekrar erişmeniz gerekirse, bu sayfayı her zaman yeniden ol
 ## Ek Not:
 Apache ayarları için `/etc/apache2/...conf` dosyalarını gözden geçir
 
+**Sıradaki İçerik: ** [Sunucunun Temel Ayarları]()
+
 ## Sonuç
 
 Artık yüklü bir LAMP yığına sahip olduğunuza göre, daha sonra yapılacaklar için birçok seçeneğiniz vardır. 
