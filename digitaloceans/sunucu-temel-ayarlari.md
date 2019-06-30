@@ -8,3 +8,6 @@
 
 * Composer Kurulumu
 * NPM Kurulumu
+* Supervisor Kurulumu
+* Redis Kurulumu
+* 
