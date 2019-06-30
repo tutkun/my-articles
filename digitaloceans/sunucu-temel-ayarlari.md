@@ -19,14 +19,20 @@ Run following commands to install php >=7.1.3, use SUDO if you are not running c
 [Orjinal Anlatım](https://danyal.dk/blog/2018/03/07/install-laravel-required-php-extentions/)
 
 **Ubuntu'yu Güncelle:**
-  sudo apt update && sudo apt upgrade
-**Add the PHP repository from Ondřej:**
+
 ```sh
-  apt install python-software-properties
-  add-apt-repository ppa:ondrej/php
-  apt update
-  apt install php7.2
+  sudo apt update && sudo apt upgrade
 ```
+
+**Add the PHP repository from Ondřej:**
+
+```sh
+apt install python-software-properties
+add-apt-repository ppa:ondrej/php
+apt update
+apt install php7.2
+```
+
 **PHP eklentiler kurulabilir:**
 ```sh
 sudo apt install php-pear \
