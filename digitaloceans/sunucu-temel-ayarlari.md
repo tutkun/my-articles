@@ -16,6 +16,8 @@ Laravel gibi uygulamaların php ile rahatça çalışması için bazı eklentile
 
 Run following commands to install php >=7.1.3, use SUDO if you are not running commands as root user.
 
+[Orjinal Anlatım](https://danyal.dk/blog/2018/03/07/install-laravel-required-php-extentions/)
+
 **Ubuntu'yu Güncelle:**
   sudo apt update && sudo apt upgrade
 **Add the PHP repository from Ondřej:**
