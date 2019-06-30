@@ -256,6 +256,31 @@ exit
 
 Bu noktada, veritabanı sisteminiz kurulmuştur ve LAMP yığınının son bileşeni olan PHP'yi kurmaya devam edebilirsiniz.
 
+## SequelPro Üzerinden SSH Bilgileri İle MySQL'e Bağlanma
+Aşağıdaki örnek bilgileri de kullanarak veritabanı sunucusuna ssh bilgileriniz ile erişebilirsiniz.
+
+```sh
+# MySQL Bilgileri
+MySQL Host: 127.0.0.1
+Username: root
+Password: şifreniz
+Database: (opsiyonel)
+Port: (opsiyonel)
+# SSH Bilgileri
+SSH Host: SUNUCU_IP_ADRESINIZ
+SSH User: root
+SSH Key: ~/.ssh/id_rsa.pub
+SSH Port: 22
+```
+
+**Benim Notum:**
+Eğer gerek duyulursa aşağıdaki komutlar ile firewall üzerinde hangi portun açılması gerektiğini de belirtebiliriz. Ancak şimdilik gerek yok!
+
+```sh
+sudo ufw allow 3306/tcp
+sudo service ufw restart
+```
+
 ## Adım 3 - PHP'yi Kurmak 
 PHP, kurulumunuzun dinamik içeriği görüntülemek için kod işleyecek bileşenidir. Komut dosyalarını çalıştırabilir, bilgi almak için MySQL veritabanlarınıza bağlanabilir ve işlenen içeriği görüntülemek için web sunucunuza teslim edebilir.
 
