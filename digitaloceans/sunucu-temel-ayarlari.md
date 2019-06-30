@@ -3,4 +3,4 @@
 * Composer Kurulumu
 * NPM Kurulumu
 
-**Sıradaki İçerik:** [SSH Sunucu Ayarları](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/ssh-sunucu-ayarlari.md)
+**Sıradaki İçerik:** [SSH Connection](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/ssh-connection.md)
