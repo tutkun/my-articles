@@ -1,14 +1,12 @@
-## Digital Ocean İçin Sunucu Kurulum Ayarları
-
-- Bu yazıda, sunucu yapılandırması adım adım anlatılacaktır.
-- İlgili adımlar Envoyer ile otomatize edilecektir.
-
 ### İçerik:
 1. Digital Ocean Sunucu Yapılandırması
 2. [SSH Bağlantısı](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/ssh-connection.md)
 3. [Sunucunun Temel Ayarları](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/sunucu-temel-ayarlari.md)
 
+## Digital Ocean İçin Sunucu Kurulum Ayarları
 
+- Bu yazıda, sunucu yapılandırması adım adım anlatılacaktır.
+- İlgili adımlar Envoyer ile otomatize edilecektir.
 
 ## Giriş
 Bir "LAMP" yığını, bir sunucunun dinamik web sitelerini ve web uygulamalarını barındırmasını sağlamak için tipik olarak bir araya getirilen bir açık kaynaklı yazılım grubudur. 
