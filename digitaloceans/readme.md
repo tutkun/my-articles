@@ -1,7 +1,8 @@
 ### İçerik:
-1. Digital Ocean Sunucu Yapılandırması
-2. [SSH Bağlantısı](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/ssh-connection.md)
-3. [Sunucunun Temel Ayarları](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/sunucu-temel-ayarlari.md)
+1. [Sunucuda Yeni Kullanıcı Oturumu](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/new-user.md)
+2. Digital Ocean Sunucu Yapılandırması
+3. [SSH Bağlantısı](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/ssh-connection.md)
+4. [Sunucunun Temel Ayarları](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/sunucu-temel-ayarlari.md)
 
 ## Digital Ocean İçin Sunucu Kurulum Ayarları
 

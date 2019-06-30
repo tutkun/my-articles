@@ -1,9 +1,11 @@
 ### İçerik:
-1. [Digital Ocean Sunucu Yapılandırması](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/readme.md)
-2. [SSH Bağlantısı](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/ssh-connection.md)
-3. Sunucunun Temel Ayarları
+1. [Sunucuda Yeni Kullanıcı Oturumu](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/new-user.md)
+2. [Digital Ocean Sunucu Yapılandırması](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/readme.md)
+3. [SSH Bağlantısı](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/ssh-connection.md)
+4. Sunucunun Temel Ayarları
 
 # Bu Kısımda Sunucunun Temel Ayarlarını Yapacağız
+
 
 * Composer Kurulumu
 * NPM Kurulumu
@@ -21,7 +23,7 @@ Run following commands to install php >=7.1.3, use SUDO if you are not running c
 **Ubuntu'yu Güncelle:**
 
 ```sh
-  sudo apt update && sudo apt upgrade
+sudo apt update && sudo apt upgrade
 ```
 
 **Add the PHP repository from Ondřej:**
