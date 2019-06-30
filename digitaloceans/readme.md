@@ -503,7 +503,7 @@ Bilgiye daha sonra tekrar erişmeniz gerekirse, bu sayfayı her zaman yeniden ol
 ## Ek Not:
 Apache ayarları için `/etc/apache2/...conf` dosyalarını gözden geçir
 
-**Sıradaki İçerik: ** [Sunucunun Temel Ayarları]()
+**Sıradaki İçerik:** [Sunucunun Temel Ayarları](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/sunucu-temel-ayarlari.md)
 
 ## Sonuç
 
