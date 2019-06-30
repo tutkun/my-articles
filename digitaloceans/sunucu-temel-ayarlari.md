@@ -22,7 +22,7 @@ Daha sonra:
 ```sh
 composer install --no-dev
 ```
-komutu ile bağımlılıkları kuruyoruz. Bu kısımda --no-dev kısmı önemlidir. Yoksa aşağıdaki hataları alırsınız.
+komutu ile bağımlılıkları kuruyoruz. Bu kısımda `--no-dev` kısmı önemlidir. Yoksa aşağıdaki hataları alırsınız.
 
 ```sh
 Do not run Composer as root/super user! See https://getcomposer.org/root for details
