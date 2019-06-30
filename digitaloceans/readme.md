@@ -3,6 +3,11 @@
 - Bu yazıda, sunucu yapılandırması adım adım anlatılacaktır.
 - İlgili adımlar Envoyer ile otomatize edilecektir.
 
+## Sayfa İçerikleri:
+    - [Digital Ocean Sunucu Yapılandırması](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/readme.md)
+    - [SSH Bağlantısı](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/ssh-connection.md)
+    - [Sunucunun Temel Ayarları](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/sunucu-temel-ayarlari.md)
+
 ## Giriş
 Bir "LAMP" yığını, bir sunucunun dinamik web sitelerini ve web uygulamalarını barındırmasını sağlamak için tipik olarak bir araya getirilen bir açık kaynaklı yazılım grubudur. 
 Bu terim aslında Apache web sunucusuyla Linux işletim sistemini temsil eden bir kısaltmadır. 
@@ -502,8 +507,6 @@ Bilgiye daha sonra tekrar erişmeniz gerekirse, bu sayfayı her zaman yeniden ol
 
 ## Ek Not:
 Apache ayarları için `/etc/apache2/...conf` dosyalarını gözden geçir
-
-**Sıradaki İçerik:** [Sunucunun Temel Ayarları](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/sunucu-temel-ayarlari.md)
 
 ## Sonuç
 
