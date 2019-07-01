@@ -6,12 +6,13 @@
 
 # Bu Kısımda Sunucunun Temel Ayarlarını Yapacağız
 
-
+* PHP Kurulumu
 * Composer Kurulumu
-* NPM Kurulumu
+* Nginx Kurulumu
+* MySQL Kurulumu
+* Git Kurulumu
 * Supervisor Kurulumu
 * Redis Kurulumu
-* 
 
 ## PHP Eklentilerinin Kurulumu
 Laravel gibi uygulamaların php ile rahatça çalışması için bazı eklentiler gereklidir.
@@ -19,6 +20,7 @@ Laravel gibi uygulamaların php ile rahatça çalışması için bazı eklentile
 Run following commands to install php >=7.1.3, use SUDO if you are not running commands as root user.
 
 [Orjinal Anlatım](https://danyal.dk/blog/2018/03/07/install-laravel-required-php-extentions/)
+[Bitfumes Anlatımı](https://bitfumes.com/courses/laravel/deploy-laravel-on-digital-ocean/tutorial-3)
 
 **Ubuntu'yu Güncelle:**
 
