@@ -306,4 +306,93 @@ Sunucuda:
 # nginx'i yeniden başlatıyoruz
 sudo service nginx restart
 sudo service nginx reload
+
+# storage chmod
+cd /var/www/html
+sudo chmod -R 777 storage
 ```
+
+Artık sunucudan gitlab üzerindeki repoyu çekerek güncelleme yapabiliriz:
+```sh
+# sunucuya git deposundan verileri çek...
+git pull
+```
+
+## MySQL Kurulumu
+
+Sunucuda:
+```sh
+mysql -u root -p
+# şifrenizi girin:
+# ...
+mysql> CREATE DATABASE tutorial;
+exit
+```
+
+Sunucuda:
+```sh
+vim .env
+# dosyadaki database ile ilgili alanları güncelliyoruz...
+```
+
+## Supervisor Kurulumu
+
+Sunucuda:
+```sh
+# kurulum
+sudo apt install supervisor
+
+# dizine gidiyoruz
+cd /etc/supervisor/conf.d/
+
+# bir .conf dosyası oluşturuyoruz
+touch queue-worker.conf
+# or
+sudo vim queue-worker.conf
+````
+
+Dosya içeriği şöyle:
+```sh
+# dosya içeriği:
+[program:queue-worker]
+process_name=%(program_name)s_%(process_name)02d
+command=php /var/www/html/artisan queue:work
+autostart=true
+autorestart=true
+user=root
+numprocs=8
+redirect_stderr=true
+stdout_logfile=/var/www/html/worker.log
+```
+olacak.
+
+Şimdi sunucuda `supervisor`'e, `/etc/supervisor/conf.d/` altındaki `*.conf` dosyaları yeniden okumasını söylüyoruz:
+```sh
+# supervisor dizinindeki dosyaları supervisor'e tanıtıyoruz
+sudo supervisorctl reread
+````
+Bu komut başarılı olduktan sonra şöyle bir çıktı oluşur:
+```sh
+# Çıktı
+queue-worker: available
+```
+
+Sunucuda:
+```sh
+# supervisor'ü yeniden yükleyelim
+sudo supervisorctl reload
+
+# yeniden başlatalım
+sudo service supervisor restart
+
+# şimdi supervisor'ü yeniden başlatalım
+sudo supervisorctl update
+```
+Bundan sonra ise şöyle bir mesaj alınır:
+```sh
+# Çıktı
+Restarted supervisord
+
+queue-worker: added process group
+```
+
