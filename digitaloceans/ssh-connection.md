@@ -7,37 +7,39 @@
 
 # Bu Yazıda Local, Sunucu ve GitLab Arasındaki SSH Bağlantısını Yapacağız
 
-* `ssh-keygen` ile bir ssh anahtarı oluşturuyoruz
-* `cat ~/.ssh/my_site_rsa.pub | pbcopy` ile *.pub dosyasının içeriğini hafızaya kopyalıyoruz
-* digitaloceans.com adresinde ssh anahtarları kısmına yapıştırıyoruz. isim olarak da *.pub dosyasının tam adını verdim.
+* Sunucuda Yeni Kullanıcı Oluşturma Ve Ayarlama
+* SSH ile Sunucuya Bağlantı Ayarları
 
-## Yeni Kullanıcı Oluşturma Ve Ayarlama
+digitaloceans.com adresinde ssh anahtarları kısmına yapıştırıyoruz. isim olarak da *.pub dosyasının tam adını verdim.
 
-Yeni bir kullanıcı oluşturmak ve ayarlamak için aşağıdaki komutları takip edin
+
+## Sunucuda Yeni Kullanıcı Oluşturma Ve Ayarlama
+
+Sunucuda yeni bir kullanıcı oluşturmak ve ayarlamak için aşağıdaki komutları takip edin. 
+Benim oluşturacağım kullanıcı `tutkun` olacak
 
 ```sh
 # tutkun adında yeni bir kullanıcı oluşturur
 adduser tutkun
 ```
 
-Şifre bilgilerini de girdikten sonra şu komut ile `tutkun` adlı kullanıcının oturumuna geçiş yapıyoruz
-
+Sunucuda oluşturduğumuz kullanıcı için şifre de belirledikten sonra, `tutkun` adlı kullanıcının oturumuna geçiş yapalım:
 ```sh
 # oturumu değiştir
 sudo su tutkun
+# ya da tekrar root olmak için
+sudo su root
 ```
 
-Bu oturumdan çıkmak için `exit` kullanabilirsiniz. 
+Bu oturumdan çıkmak için `exit`'i de kullanabilirsiniz. 
 
-`root` kullanıcısını kullanarak `tutkun` kullanıcısı için yetki tanımlamasını yapınız:
-
+Sunucuda `root` kullanıcısını kullanarak `tutkun` kullanıcısı için yetki tanımlamasını yapınız:
 ```sh
 # tutkun kullanıcısına admin yetkileri veriliyor
 usermod -aG admin tutkun
 ```
 
-Ayarların yapılması:
-
+Sunucuda:
 ```sh
 # tutkun olarak oturum açıyoruz
 sudo su tutkun
@@ -89,6 +91,42 @@ ssh root@IP_ADRESIMIZ
 # tekrar bu şekilde kullanıcıya yetkili giriş yaptırıyoruz
 ssh -i ~/ssh/sunucu_rsa tutkun@SUNUCU_IP_ADRESI
 ```
+
+
+## SSH ile Sunucuya Bağlantı Ayarları
+
+Bilgisayarınızda:
+```sh
+# ssh-keygen ile bir ssh oluşturuyoruz (tutkun adı ile: dosya sonundaki yorum sanırım)
+ssh-keygen -t rsa -b 4096 -C "tutkun"
+
+# Gerekli adımlardan sonra ssh için parola sorulur. 
+# Bu parola bilgisayarınızdaki ssh'ı korumak içindir. 
+# Sunucu şifresi değildir.
+# Bu adımdan sonra ssh-key'iniz oluşturuldu
+```
+
+Şimdi bilgisayarınızda oluşturulan bu `ssh`ın `*.pub` uzantılı dosyasının içeriğini geçiçi hafızaya alarak sunucunuzdaki `authorized_keys` kısmına ekleyeceğiz:
+```sh
+cat ~/.ssh/id_rsa.pub | pbcopy # pbcopy mac içindir
+```
+
+Sunucunuzda:
+```sh
+sudo vim ~/.ssh/authorized_keys
+# dosyasının içine bilgisayarınızdan kopyaladığınız ssh.pub'ı yapıştıryoruz
+exit
+```
+ile sunucudan çıkabiliriz.
+
+Bilgisayarınızdan ssh ile bağlanabiliyor muyuz bakalım:
+```sh
+# root ve _ip_address_ sizde farklı olacaktır
+ssh -i ~/.ssh/id_rsa root@_ip_address_
+```
+
+Artık sunucuya `ssh` ile doğrudan bağlanabiliriz :)
+
 
 ## Devamı:
 [Video Serisi](https://bitfumes.com/courses/laravel/deploy-laravel-on-digital-ocean/tutorial-2)
