@@ -42,7 +42,7 @@ sourceforge.net üzerinden rEFInd programını indirin. @sns5694 kullanıcısın
 
 ### Kurulum
 
-Bilgisayar yeniden başlarken `cmd+r` tuşu ile kurulum ekranına geçiyoruz. Ve terminal dosyası açıp `bash` 'a şu komutları giriyoruz.
+Bilgisayar yeniden başlarken `option + r` tuşu ile kurulum ekranına geçiyoruz. Ve terminal dosyası açıp `bash` 'a şu komutları giriyoruz.
 
 ```sh
 -bash-3.2# cd /Volumes/Macintosh\ HD/Users/tutkun/Desktop/refind-bin-0.10.5/
@@ -50,4 +50,64 @@ Bilgisayar yeniden başlarken `cmd+r` tuşu ile kurulum ekranına geçiyoruz. Ve
 ```
 ardından size sorulan `Do you want to attempt installation [Y/N]?` sorusuna `y` cevabını verin.
 
-#### 
+#### OS-X İçinde EFI Ayarı
+
+`finder` içinde `NO NAME` diskine girerek şu dizine gidin:
+```sh
+$ /EFI/BOOT/
+# ardından `open with -> other` ile şu dosyaya sağ tıklayıp açın
+syslinux.cfg
+```
+
+içindeki şu satırları:
+```sh
+include menu.cfg
+default vesamenu.c32
+prompt 0
+timeout 0
+```
+
+şununla değiştirin:
+```sh
+include menu.cfg
+default menu.c32
+prompt 0
+timeout 0
+```
+ve kaydedip kapatın.
+
+- Şimdi tekrar `Disk Utility` 'yi açın.
+- Apple SSD üzerine gelip `Partition (Bölümleme)` düğmesine tıklayın.
+- Açılan disk pastasının altındaki `+` ikonuna tıklayarak yeni bir disk bölümü oluşturun.
+
+Partition Bilgilerine şunları girin:
+```sh
+Name: Kali Linux
+Format: ExFAT
+Size: 25 GB
+```
+ardından `Apply` ve `Partition` butonlarına tıklayarak onaylayın.
+
+Artık iki tane bölüm var:
+- Macintosh HD
+- Kali Linux
+
+Şimdi bilgisayarı yeniden başlatın.
+`Boot: EFI\BOOT\syslinux.cfg from XXX MiB FAT volume` kısmını seçin.
+
+Artık Kali Linux kurulumu başladı...
+
+Disk seçerken:
+```sh
+24.2 GB  f ext4  Kali Linux  /
+```
+şeklinde seçmeyi unutmayın.
+
+Diğer kurulum adımlarını da tamamladıktan sonra Kali Linux açılacaktır.
+
+
+
+
+
+
+
