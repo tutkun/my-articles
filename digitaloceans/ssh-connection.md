@@ -51,29 +51,38 @@ vim ~/.ssh/authorized_keys
 
 ile dosyayı düzenleme modunda açıyoruz. İçerisine local'deki `sunucu_rsa.pub`'dan kopyaladığımız veriyi ekliyoruz.
 
+Sunucuda:
 ```sh
 # local'den *.pub içeriğini kopyalama
 cat ~/.ssh/sunucu_rsa.pub | pbcopy
 ```
 yukarıdaki `authorized_keys` dosyasına kopyaladığımız bu ssh verisini ekliyoruz.
 
+Sunucuda:
 ```sh
 exit # komutu ile root kullanıcısına geçiş yapıyoruz
 ```
 
+Bilgisayarımızda:
 ```sh
 # artık local bilgisayarımızdan sunucuya yeni oluşturduğumuz kullanıcı ile ssh bağlantısı yapalım
 ssh -i ~/ssh/sunucu_rsa tutkun@SUNUCU_IP_ADRESI
 ```
 
-Bu sayede artık kişisel bilgisayarımıza `tutkun` kullanıcısı için bağlantı yetkisi verdik.
-`tutkun` kullanıcısı aktifken şu komutu veriyoruz:
+Bu sayede artık kişisel bilgisayarımıza, sunucuda `tutkun` kullanıcısı için bağlantı yetkisi verdik.
+Sunucuda `tutkun` kullanıcısı aktifken şu komutu veriyoruz:
 ```sh
 # ssh ayar dosyası
 sudo vim /etc/ssh/sshd_config
 ```
-Bu dosyada iki şeyi `no` olarak değiştiriyoruz. Bunlardan biri `PermitRootLogin yes` diğeri de `PasswordAuthentication yes` olan kısımları `no` yaparak dosyayı kaydedip çıkıyoruz.
 
+Bu dosyada iki şeyi `no` olarak değiştiriyoruz. Bunlar:
+```sh
+PermitRootLogin yes # no olacak
+PasswordAuthentication yes # no olacak
+```
+
+Sunucuda:
 ```sh
 # exit ile tutkun kullanıcısından çıkış yapıp root kullanıcısına geçiyoruz
 exit
@@ -82,14 +91,14 @@ exit
 sudo service ssh restart
 ```
 
-Ardından tekrar;
+Ardından bilgisayarımızdan tekrar:
 ```sh
 ssh root@IP_ADRESIMIZ
 ```
 
 ```sh
-# tekrar bu şekilde kullanıcıya yetkili giriş yaptırıyoruz
-ssh -i ~/ssh/sunucu_rsa tutkun@SUNUCU_IP_ADRESI
+# tekrar bu şekilde kullanıcıya identifier parametresi ile giriş yaptırıyoruz
+ssh -i ~/ssh/id_rsa tutkun@SUNUCU_IP_ADRESI
 ```
 
 
@@ -125,7 +134,7 @@ Bilgisayarınızdan ssh ile bağlanabiliyor muyuz bakalım:
 ssh -i ~/.ssh/id_rsa root@_ip_address_
 ```
 
-Artık sunucuya `ssh` ile doğrudan bağlanabiliriz :)
+**NOT:** Artık sunucuya `ssh` ile doğrudan bağlanabilir ve `PHP`, `Nginx`, `MySQL` ve `git` gibi uygulamaları kurabiliriz. :)
 
 
 ## Devamı:
