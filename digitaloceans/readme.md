@@ -1,8 +1,8 @@
 ### İçerik:
-1. [Sunucuda Yeni Kullanıcı Oturumu](/tutkun/my-articles/blob/master/digitaloceans/new-user.md)
+1. [Sunucuda Yeni Kullanıcı Oturumu](/digitaloceans/new-user.md)
 2. Digital Ocean Sunucu Yapılandırması
-3. [SSH Bağlantısı](/tutkun/my-articles/blob/master/digitaloceans/ssh-connection.md)
-4. [Sunucunun Temel Ayarları](/tutkun/my-articles/blob/master/digitaloceans/sunucu-temel-ayarlari.md)
+3. [SSH Bağlantısı](/digitaloceans/ssh-connection.md)
+4. [Sunucunun Temel Ayarları](/digitaloceans/sunucu-temel-ayarlari.md)
 
 ## Digital Ocean İçin Sunucu Kurulum Ayarları
 
