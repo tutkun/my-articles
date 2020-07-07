@@ -1,7 +1,7 @@
 ### İçerik:
-1. [Sunucuda Yeni Kullanıcı Oturumu](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/new-user.md)
-2. [Digital Ocean Sunucu Yapılandırması](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/readme.md)
-3. [SSH Bağlantısı](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/ssh-connection.md)
+1. [Sunucuda Yeni Kullanıcı Oturumu](/digitaloceans/new-user.md)
+2. [Digital Ocean Sunucu Yapılandırması](/digitaloceans/readme.md)
+3. [SSH Bağlantısı](/digitaloceans/ssh-connection.md)
 4. Sunucunun Temel Ayarları
 
 # Bu Kısımda Sunucunun Temel Ayarlarını Yapacağız

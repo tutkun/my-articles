@@ -1,8 +1,8 @@
 ### İçerik:
-1. [Sunucuda Yeni Kullanıcı Oturumu](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/new-user.md)
-2. [Digital Ocean Sunucu Yapılandırması](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/readme.md)
+1. [Sunucuda Yeni Kullanıcı Oturumu](/digitaloceans/new-user.md)
+2. [Digital Ocean Sunucu Yapılandırması](/digitaloceans/readme.md)
 3. SSH Bağlantısı
-4. [Sunucunun Temel Ayarları](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/sunucu-temel-ayarlari.md)
+4. [Sunucunun Temel Ayarları](/digitaloceans/sunucu-temel-ayarlari.md)
 
 
 # Bu Yazıda Local, Sunucu ve GitLab Arasındaki SSH Bağlantısını Yapacağız
