@@ -1,3 +1,5 @@
+*ÖNEMLİ NOT:* Bu tanıtımın `şu an` için ne derece geçerli ve güncel olduğunu bilmiyorum. Kontrol etmedim. Kullanacak olan kişilerin ilgili bağlantıdan kontrol etmelerini öneriririm. Kullanmamama rağmen çeşitlilik olması açısından çok eski olan bu makaleyi silmiyorum.
+
 ## Messenger
 
 Güzel bir mesajlaşma sistemine sahip composer modülü.
@@ -90,19 +92,19 @@ class User extends Authenticatable implements MessageableInterface
 // Import the facade
 use Messenger;
 
-// Bir kullanıcının diğer kullanıcıya mesajı
+// $user kullanıcısının $user2 kullanıcısına mesaj göndermesi
 Messenger::from($user)->to($user2)->message('Hey!')->send();
 
-// Birden fazla kişiye göndermek içini `id`leri dizi olarak yolla
+// $user tarafından birden fazla kişiye mesaj göndermek için; diğer user `id`lerini array olarak gönder
 Messenger::from($user)->to([1,2,3,4,5])->message('Hey!')->send();
 
-// Bir thread'e mesaj gönderimi
-Messenger::from($user)->to($thread)->message('That\'s awesome!')->send();
+// $user tarafından $thread'e mesaj gönderimi
+Messenger::from($user)->to($thread)->message("That's awesome!")->send();
 
-// Yeni mesajların sayısı
+// okunmamış mesajların sayısı
 echo $user->unreadMessagesCount;
 
-// Belirli bir kullanıcı thread'inin mesaj sayısı
+// $user'a ait threadlerden ilkinin okunmayan mesajlarının sayısı
 echo $user->threads->first()->unreadMessagesCount;
 
 // Thread'i okundu olarak işaretle
@@ -110,13 +112,14 @@ $user->markThreadAsRead($thread_id);
 ```
 
 ### Thread Dinamik Özellikleri
-Bunlar veritabanında tutulmayan, mesajların içeriğine göre oluşturulup gösterilendir
-Örneğin, konu başlıklarının tek başına bir başlığı yok, Messenger katılımcı listesine göre oluşturacak.
+
+Bunlar; veritabanında tutulmayan, mesajların içeriğine göre oluşturulup gösterilendir
+Örn; konu başlıklarının tek başına bir başlığı yok. Messenger katılımcı listesine göre oluşturacak.
 
 *Attributes:*
-* `$thread->title`
-* `$thread->creator` to get the thread creator.
-* `$thread->lastMessage` to get the latest message in the thread.
+* `$thread->title` thread'in başlığı
+* `$thread->creator` thread oluşturucuyu almak için
+* `$thread->lastMessage` thread'deki en son mesajı almak için
 
 ### Kullanıcı threadlerini gösterme
 
@@ -128,6 +131,7 @@ public function index()
     // Eager Yükleme ile veritabanından daha fazla tabloyu çekebiliriz:
     $this->user->load('threads.messages.sender');
 
+    // views/messages/index.php'ye $threads olarak $this->user->threads'i aktarmak
     return view('messages.index', [
         'threads' => $this->user->threads
     ]);
