@@ -1,8 +1,8 @@
 ### İçerik:
-1. [Sunucuda Yeni Kullanıcı Oturumu](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/new-user.md)
+1. [Sunucuda Yeni Kullanıcı Oturumu](/tutkun/my-articles/blob/master/digitaloceans/new-user.md)
 2. Digital Ocean Sunucu Yapılandırması
-3. [SSH Bağlantısı](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/ssh-connection.md)
-4. [Sunucunun Temel Ayarları](https://gitlab.com/tutkun/reading/blob/master/digitaloceans/sunucu-temel-ayarlari.md)
+3. [SSH Bağlantısı](/tutkun/my-articles/blob/master/digitaloceans/ssh-connection.md)
+4. [Sunucunun Temel Ayarları](/tutkun/my-articles/blob/master/digitaloceans/sunucu-temel-ayarlari.md)
 
 ## Digital Ocean İçin Sunucu Kurulum Ayarları
 
@@ -208,13 +208,13 @@ SELECT user,authentication_string,plugin,host FROM mysql.user;
 # Çıktı
 Output
 +------------------+-------------------------------------------+-----------------------+-----------+
-| user             | authentication_string                     | plugin                | host      |
-+------------------+-------------------------------------------+-----------------------+-----------+
-| root             |                                           | auth_socket           | localhost |
-| mysql.session    | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE | mysql_native_password | localhost |
-| mysql.sys        | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE | mysql_native_password | localhost |
-| debian-sys-maint | *CC744277A401A7D25BE1CA89AFF17BF607F876FF | mysql_native_password | localhost |
-+------------------+-------------------------------------------+-----------------------+-----------+
+| user             | authentication_string                               | plugin                | host      |
++------------------+-----------------------------------------------------+-----------------------+-----------+
+| root             |                                                     | auth_socket           | localhost |
+| mysql.session    | *THIS_IS_NOT_A_VALID_PASSWORD_THAT_CAN_BE_USED_HERE | mysql_native_password | localhost |
+| mysql.sys        | *THIS_IS_NOT_A_VALID_PASSWORD_THAT_CAN_BE_USED_HERE | mysql_native_password | localhost |
+| debian-sys-maint | *CC744277A401A7D25BE1CA89AFF17BF607F876FF           | mysql_native_password | localhost |
++------------------+-----------------------------------------------------+-----------------------+-----------+
 4 rows in set (0.00 sec)
 ```
 
