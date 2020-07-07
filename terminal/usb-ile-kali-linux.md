@@ -5,12 +5,14 @@
 
 Kali linux iso dosyasını kullanıcı dizinine `cp` komutu ile kopyalıyoruz:
 ```sh
-cp ./kali-linux-x64.iso ~/kali-linux-x64.iso
+cp ./kali-linux-x64.iso $HOME/kali-linux-x64.iso
 ```
 
 Kullanıcı dizinine geçiş yapıyoruz:
 ```sh
 cd ~/
+// veya
+cd $HOME
 ```
 
 Mac'teki disklerin volume'lerini listeliyoruz:

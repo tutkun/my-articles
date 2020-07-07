@@ -1,6 +1,6 @@
 # Algoritmalar
 
-Bu yazıda, bazı matematiksel algoritmaları açıklayacağım.
+Bu yazıda, bazı matematiksel algoritmaları açıklayacağım. Elbette bazı kısımlardaki kodların daha da kısa ve performanslı kullanımları var. Ancak buradaki amacım, kodu anlaşılır kılma çabasıdır.
 
 ### Mutlak Değer
 

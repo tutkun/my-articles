@@ -1,3 +1,5 @@
+*ÖNEMLİ NOT:* Bu tanıtımın `şu an` için ne derece geçerli ve güncel olduğunu bilmiyorum. Kontrol etmedim. Kullanacak olan kişilerin ilgili bağlantıdan kontrol etmelerini öneriririm. Kullanmamama rağmen çeşitlilik olması açısından çok eski olan bu makaleyi silmiyorum.
+
 ## Introduction
 
 Laravel is an open-source PHP web framework designed to make common web development tasks, such as authentication, routing, and caching, easier. Deployer is an open-source PHP deployment tool with out-of-the-box support for a number of popular frameworks, including Laravel, CodeIgniter, Symfony, and Zend Framework.
@@ -440,10 +442,10 @@ Run the following command on your server, and copy and paste your local .env fil
 nano /var/www/html/laravel-app/shared/.env
 Before you can save it, there are some changes that you should make. Set APP_ENV to production, APP_DEBUG to false, APP_LOG_LEVEL to error and don't forget to replace the database, the database user, and password with your own. You should replace example.com with your own domain as well:
 
-/var/www/html/laravel-app/shared/.env
+`/var/www/html/laravel-app/shared/.env` file:
 APP_NAME=Laravel
 APP_ENV=production
-APP_KEY=base64:cA1hATAgR4BjdHJqI8aOj8jEjaaOM8gMNHXIP8d5IQg=
+APP_KEY=base64:cA1hATdf53r3gd5ggd53r3Oj8jEjaaOM8gMNHXIP8d5IQg=
 APP_DEBUG=false
 APP_LOG_LEVEL=error
 APP_URL=http://example.com

@@ -22,8 +22,7 @@ Bu anlatımların benzerleri [şuradaki youtube](https://www.youtube.com/playlis
 ### ECHO Komutu
 Bir şeyi ekrana basmak için:
 ```sh
-    echo "Merhaba dünyamız!"
-    
+    echo "Merhaba Kıymetlimissss! 😅"
 ```
 
 ### IF Komutu
@@ -38,13 +37,13 @@ fi
 ### IF-ELSE Komutu
 Burada da else ile diğer durumu göreceğiz:
 ```sh
-if [[ "bu" -eq "bu" ]]; then
+if [[ $degisken_degeri -eq "buna eşit" ]]; then
     echo "Parametreler eşit: -eq (equals)"
 else
     echo "Parametreler eşit değil: -ne (not equals)"
 fi
-
 ```
+Yukarıda `[[` ile `$degisken_degeri` arasında bir boşluk olması önemlidir. Aslında her komut arasında bir boşluk olmalı.
 
 ### IF-ELIF Komutu
 Burada da if-elif-else durumunu göreceğiz:
@@ -191,3 +190,5 @@ cikartma_islemi () {
 cikartma_islemi 120 20
 
 ```
+
+_Fırsat buldukça güncellerim..._

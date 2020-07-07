@@ -10,7 +10,7 @@
     ---------------------------------------------------------------------------
 
  *  belongsToMany (M-M)
-    -save(new or existing model, array of pivot data, touch parent = true)
+    -save("yeni veya mevcut model", "pivot verisinin array'i", "touch parent = true")
     -saveMany(array of new or existing model, array of arrays with pivot ata)
     -create(attributes, array of pivot data, touch parent = true)
     -createMany(array of arrays of attributes, array of arrays with pivot data)
@@ -19,17 +19,17 @@
     -updateExistingPivot(relatedId, array of pivot data, touch)
     ---------------------------------------------------------------------------
 
- *  morphTo (polymorphic M-1)
+ *  morphTo (polymorphic Many-to-One)
     // the same as belongsTo
     ---------------------------------------------------------------------------
 
- *  morphOne / morphMany (polymorphic 1-M)
+ *  morphOne / morphMany (polymorphic One-to-Many)
     // the same as hasOne / hasMany
     ---------------------------------------------------------------------------
 
- *  morphedToMany / morphedByMany (polymorphic M-M)
+ *  morphedToMany / morphedByMany (polymorphic Many-to-Many)
     // the same as belongsToMany
     ---------------------------------------------------------------------------
 
- *  belongsToManyThrought ?
+ *  belongsToManyThrought 
     // 
