@@ -24,7 +24,7 @@ Unmount of all volumes on disk1 was successful
 
 Şimdi terminalde `.iso` dosyamızın bulunduğu yolu belirterek şu komutları veriyoruz:
 ```sh
-sudo dd if=/Userss/tutkun/Desktop/kali-linux-2019.2-amd64.iso of=/dev/disk1 bs=1m
+sudo dd if=/Users/${USER}/Desktop/kali-linux-2019.2-amd64.iso of=/dev/disk1 bs=1m
 ```
 ve işletim sisteminizin kullanıcı şifresini girerek onaylıyoruz.
 
@@ -45,7 +45,7 @@ sourceforge.net üzerinden rEFInd programını indirin. @sns5694 kullanıcısın
 Bilgisayar yeniden başlarken `option + r` tuşu ile kurulum ekranına geçiyoruz. Ve terminal dosyası açıp `bash` 'a şu komutları giriyoruz.
 
 ```sh
--bash-3.2# cd /Volumes/Macintosh\ HD/Users/tutkun/Desktop/refind-bin-0.10.5/
+-bash-3.2# cd /Volumes/Macintosh\ HD/Users/${USER}/Desktop/refind-bin-0.10.5/
 -bash-3.2# ./refind-install
 ```
 ardından size sorulan `Do you want to attempt installation [Y/N]?` sorusuna `y` cevabını verin.
