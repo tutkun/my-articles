@@ -8,26 +8,27 @@ Bu anlatımların benzerleri [şuradaki youtube](https://www.youtube.com/playlis
 
 
 ## Konular
-- `echo` Komutu
-- `if` Komutu
-- `if-else` Komutu
-- `if-elif` Komutu
-- Değişken tanımlama
-- `case` Komutu
-- `while` Komutu
-- `for` Komutu
-- `sort` Komutu
-- `uniq` Komutu
-- Fonksiyon tanımlama
+- [`echo` Komutu](#echo-komutu)
+- [`if` Komutu](#if-komutu)
+- [`if-else` Komutu](#if-else-komutu)
+- [`if-elif` Komutu](#if-elif-komutu)
+- [`if-elif-else` Komutu](#if-elif-else-komutu)
+- [Değişken tanımlama](#degisken-tanimlama)
+- [`case` Komutu](#case-komutu)
+- [`while` Komutu](#while-komutu)
+- [`for` Komutu](#for-komutu)
+- [`sort` Komutu](#sort-komutu)
+- [`uniq` Komutu](#uniq-komutu)
+- [Fonksiyon tanımlama](#fonksiyon-tanimlama)
 
-
+<a id="echo-komutu"></a>
 ### ECHO Komutu
 Bir şeyi ekrana basmak için:
 ```sh
     echo "Merhaba Kıymetlimissss! 😅"
 ```
 
-
+<a id="if-komutu"></a>
 ### IF Komutu
 `bu` ile `buna` adlı iki parametre birbinine eşit değilse:
 ```sh
@@ -36,7 +37,7 @@ if [[ "bu" -ne "buna" ]]; then
 fi
 ```
 
-
+<a id="if-else-komutu"></a>
 ### IF-ELSE Komutu
 Burada da else ile diğer durumu göreceğiz:
 ```sh
@@ -48,7 +49,7 @@ fi
 ```
 Yukarıda `[[` ile `$degisken_degeri` arasında bir boşluk olması önemlidir. Aslında her komut arasında bir boşluk olmalı.
 
-
+<a id="if-elif-komutu"></a>
 ### IF-ELIF Komutu
 Burada da if-elif-else durumunu göreceğiz:
 ```sh
@@ -59,7 +60,7 @@ elif [[ 4 -lt 6 ]]; then
 fi
 ```
 
-
+<a id="if-elif-else-komutu"></a>
 ### IF-ELIF-ELSE Komutu
 Burada da if-elif-else durumunu göreceğiz:
 ```sh
@@ -72,7 +73,7 @@ else
 fi
 ```
 
-
+<a id="degisken-tanimlama"></a>
 ### Değişken Tanımlama
 Şimdi de bir değişkenin nasıl tanımlanıp kullanıldığını göreceğiz:
 ```sh
@@ -87,7 +88,7 @@ else
 fi
 ```
 
-
+<a id="case-komutu"></a>
 ### CASE Komutu
 Şimdi de `case` komutunun nasıl kullanıldığını göreceğiz:
 ```sh
@@ -105,7 +106,7 @@ case $isim in
 esac
 ```
 
-
+<a id="while-komutu"></a>
 ### WHILE Döngü Komutu
 While ile döngü nasıl yapılır bakalım:
 ```sh
@@ -132,7 +133,7 @@ done < $dosya
 ```
 tabii ki daha spesifik işlemler de yapılabilir. Mesela `done < $dosya` yerinde `$(ls -l | awk '{print $0}')` şeklinde bir dizin içindeki dosya/dizinler listelenip ilk sütuna denk gelenler alınabilir.
 
-
+<a id="for-komutu"></a>
 ### FOR Komutu
 for döngüsünün çalışma şekli
 ```sh
@@ -142,8 +143,8 @@ do
 done
 ```
 
-
-### Sort Kullanımı
+<a id="sort-komutu"></a>
+### Sort Komutu
 Bir dosya içindeki metni satırlara göre sıralı almak:
 ```sh
 # önce bir dosya oluşturalım:
@@ -165,8 +166,8 @@ beşinci
 cat metin.txt | sort
 ```
 
-
-### Unique Kullanımı
+<a id="uniq-komutu"></a>
+### Uniq Komutu
 Bir metin içindeki satırları `sort` ile alfabetik olarak sıralayıp aynı olan satırları `uniq` ile çıkartıp ekranda gösteriyoruz:
 ```sh
 cat metin.txt | sort | uniq
@@ -175,7 +176,7 @@ cat metin.txt | sort | uniq
 rm -f metin.txt
 ```
 
-
+<a id="fonksiyon-tanimlama"></a>
 ### Fonksiyon Tanımlama
 Aşağıda kullanılmak üzere bir fonksiyon tanımlayalım:
 ```sh
