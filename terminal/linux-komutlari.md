@@ -25,7 +25,7 @@ Bu anlatımların benzerleri [şuradaki youtube](https://www.youtube.com/playlis
 ### ECHO Komutu
 Bir şeyi ekrana basmak için:
 ```sh
-    echo "Merhaba Kıymetlimissss! 😅"
+echo "Merhaba Kıymetlimissss! 😅"
 ```
 
 <a id="if-komutu"></a>
@@ -100,11 +100,17 @@ case $isim in
     "Samet"|"samet" )
         echo "Hoşgeldin $isim"
     ;;
+
+    "Ahmet" )
+        echo "Merhaba Ahmet!"
+    ;;
+    
     * )
-        echo "Üzgünüm, tanıyamadım."
+        echo "Tanıyamadım, kimsiniz?"
     ;;
 esac
 ```
+Case komutu, verilen bir değişken (`$isim`) içindeki değer ile `"Samet"` veya `"samet"` gibi durumları karşılaştırarak eşleşip eşleşmediklerine bakar. Eşleşirse `)` ile `;;` arasında kalan koşulu çalıştırır. Eşleşmezse bir sonraki koşulu denetler. Eğer hiç eşleşen bir durum yoksa; en son kısımda `*` jokeri ile tanımladığımız koşulu çalıştırır. `*` kısmı ise, programlamada genelde `herhangi bir şey` ya da `hiçbir şey` anlamında kullanılır.
 
 <a id="while-komutu"></a>
 ### WHILE Döngü Komutu
