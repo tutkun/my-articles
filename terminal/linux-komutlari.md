@@ -189,6 +189,7 @@ cikartma_islemi () {
 # fonksiyona 2 parametre gönderip çıkartma işlemini yapıyoruz:
 cikartma_islemi 120 20
 ```
+Unutmayın, fonksiyon adi olan `cikartma_islemi` ile `()`ler arasında ve `{}` arasında boşluk olmalı. Yoksa fonksiyon tanımlanmaz. 
 
 
 _Fırsat buldukça güncellerim..._
