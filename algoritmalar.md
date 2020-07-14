@@ -2,20 +2,21 @@
 
 Bu yazıda, bazı matematiksel algoritmaları açıklayacağım. Elbette bazı kısımlardaki kodların daha da kısa ve performanslı kullanımları var. Ancak buradaki amacım, kodu anlaşılır kılma çabasıdır.
 
-### Mutlak Değer
+### Bir Sayının -1 ile Çarpımı
 
-Bilindiği gibi bir sayı, -4 (negatif), 0 ve +4 (pozitif) gibi değerler alabilir. Bu durumda, biz bir sayının pozitiflik ya da negatiflik değerini önemsemeden onu pozitif bir sayıya dönüştürebiliriz. Yani bir sayıyı mutlak manada pozitif olarak ele alabiliriz. Bunu yapmak için sayıyı -1 ile çarpmak yeterlidir. Çünkü bir sayının -1 ile çarpımı, o sayının pozitifini verir.
+Bir sayının işaretini tersine çevirmek istiyorsak, o sayıyı `-1` ile çarparız.
 
 ```py
-negatifSayı = -4
+x = 5
 # - ile -'nin çarpımı +'dır. yani -'ler birbirini götürür
-mutlakSayı = -4 * -1
-print(mutlakSayı)
+sayi = x * -1
+print(sayi)
+# Sonuç: -5
 ```
 
 ### Tek mi, Çift mi
 
-Bir sayının tek mi yoksa çift mi olduğunu anlamak için, o sayının 2'ye bölümünden kalanın 0 mı, 1 mi olduğunu bilmek gerekir.
+Bir sayının tek mi, çift mi olduğunu anlamak için: o sayının 2'ye bölümünden kalanın 0 mı, 1 mi olduğunu bilmek gerekir.
 
 ```py
 sayı = 10
