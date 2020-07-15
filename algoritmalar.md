@@ -19,9 +19,11 @@ print(sayi)
 Bir sayının tek mi, çift mi olduğunu anlamak için: o sayının 2'ye bölümünden kalanın 0 mı, 1 mi olduğunu bilmek gerekir.
 
 ```py
-sayı = 10
-mod = sayı % 2 # %, programlamada bölme işareti değil, mod işaretidir.
+sayi = 10
+# programlamada `%` bölme işareti değil, `mod` operatörüdür.
+mod = sayi % 2
 print(mod === 1 ? 'Tek' : 'Çift')
+# Sonuç: 'Çift'
 ```
 
 ### 1'den n'e Kadar Olan Çift Sayıların Toplamı
